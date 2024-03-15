@@ -4,8 +4,31 @@ body {
   margin: 0;
 }
 
-h1,h2,h3,p {
+h1,h2,h3,p,a {
     font-family: 'Noto Serif JP', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* common */
+.cta-button {
+  color: #ffffff;
+  background-color: #464646;
+  font-size: 24px;
+  padding: 16px 56px;
+  box-sizing: border-box;
+}
+
+.cta-button i {
+  margin-left: 16px;
+}
+
+.cta-button:hover {
+  color: #464646;
+  background: #fff;
+  border: 1px solid #464646;
 }
 
 /* header */
@@ -215,7 +238,7 @@ header .bi {
   height: 500px;
   padding: 20px;
   box-sizing: border-box;
-  margin: 24px auto;
+  margin: 48px auto;
 }
 
 .service-block h3 {
@@ -235,21 +258,41 @@ header .bi {
   color: #fff;
 }
 
+.service-link {
+  color: #fff;
+  font-size: 24px;
+}
+
+
+.service-link i {
+  margin-left: 8px;
+}
+
+
+  
+.service-link:hover {
+  border-bottom: 1px solid #fff;
+}
+
 /*service PC*/
 @media (min-width: 600px) {
   .service-block {
     display: flex;
-    gap: 64px;
+    gap: 96px;
     height: auto;
     justify-content: center;
+    margin: 48px auto;
   }
   .service-block:nth-child(even) {
     flex-direction: row-reverse;
   }
+  .service-block-text {
+    margin: auto;
+  }
 
   .service-block img {
-    width: 480px;
-    height: 320px;
+    width: 590px;
+    height: auto;
   }
 }
 
@@ -267,12 +310,16 @@ header .bi {
 
 .gallery-pictures-flow {
   animation-name: flow;
-  animation-duration: 30s;
+  animation-duration: 40s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   width: 1580px;
   display: flex;
   gap: 16px;
+}
+
+.gallery-pictures-link:hover img {
+  opacity: 0.7;
 }
 
 @keyframes flow {
@@ -294,7 +341,7 @@ header .bi {
 @media (min-width: 600px) {
 
   .gallery-pictures-flow {
-      animation-duration: 40s;
+      animation-duration: 120s;
   }
   .gallery-pictures-flow img {
     width: 404px;
